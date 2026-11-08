@@ -1,4 +1,4 @@
-import styles from "./Card.module.css";
+import styles from "./card.module.css";
 import { motion } from "motion/react";
 
 export type ProjectStatus = "completed" | "in-progress" | "on-hold";
