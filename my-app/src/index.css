@@ -1,22 +1,26 @@
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap");
 
 :root {
-  font-family:var(--font-mono);
-  color: #20242b;
-  background: #f7f8fa;
+  --font-mono: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
+
+  --color-text: #e6edf3;
+  --color-heading: #f0f6fc;
+  --color-muted: #aab6c5;
+  --color-background: #0d1117;
+  --color-surface: #0f151d;
+  --color-border: #27313d;
+  --color-accent: #8de1d1;
+
+  font-family: var(--font-mono);
+  color: var(--color-text);
+  background: var(--color-background);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
-  --color-text: #20242b;
-  --color-muted: #68717d;
-  --color-surface: #ffffff;
-  --color-border: #e2e6eb;
-  --color-accent: #087f8c;
-  --font-mono: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
 }
+
 
 * {
   box-sizing: border-box;
@@ -31,6 +35,8 @@ body {
   min-width: 320px;
   min-height: 100vh;
   margin: 0;
+  color: var(--color-text);
+  background: var(--color-background);
 }
 
 #root {
@@ -95,15 +101,10 @@ p {
 
 .card {
   padding: 1.5rem;
+  color: var(--color-text);
   background: var(--color-surface);
   border: 1px solid var(--color-border);
-  border-radius: 0.75rem;
-}
-
-.projectGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
-  gap: 1.25rem;
+  border-radius: 1rem;
 }
 
 .button {
@@ -113,21 +114,20 @@ p {
   min-height: 2.75rem;
   padding: 0.7rem 1rem;
   border: 1px solid var(--color-border);
-  border-radius: 0.5rem;
-  color: var(--color-text);
-  background: var(--color-surface);
-  font-family: var(--font-mono);
+  border-radius: 0.75rem;
+  color: var(--color-accent);
+  background: #142a2a;
+  font: inherit;
   text-decoration: none;
   cursor: pointer;
   transition: background-color 160ms ease, border-color 160ms ease;
 }
 
 .button:hover {
-  background: #eef2f5;
-  border-color: #c7cfd8;
+  background: #1c3a38;
+  border-color: #8de1d1;
 }
 
-:focus-visible {
-  outline: 3px solid #55bdc5;
-  outline-offset: 3px;
+a {
+  color: var(--color-accent);
 }

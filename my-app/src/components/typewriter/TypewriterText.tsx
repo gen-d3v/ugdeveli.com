@@ -8,7 +8,7 @@ type TypewriterTextProps = {
 
 export default function TypewriterText({
   text,
-  speed = 25,
+  speed = 15,
 }: TypewriterTextProps) {
   const [visibleText, setVisibleText] = useState("");
 

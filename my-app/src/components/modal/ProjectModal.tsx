@@ -38,8 +38,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
         </button>
 
         <h2 id="project-modal-title">{project.title}</h2>
-        <p>
-          {" "}
+        <p className={styles.projectDescription}>
           <TypewriterText text={project.description} />
         </p>
       </motion.section>

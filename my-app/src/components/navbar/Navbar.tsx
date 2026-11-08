@@ -8,7 +8,7 @@ interface Props extends LinkProps {
 
 export default function Navbar() {
   return (
-    <div>
+    <div className={styles.center}>
       <nav className={styles.Navbar}>
         <Link to="/" className={styles.siteTitle}>
           ugdeveli.com
